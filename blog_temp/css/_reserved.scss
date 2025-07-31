@@ -1,0 +1,74 @@
+main#reserved {
+  padding-bottom: 100px;
+  section#reserved_main_visual {
+    background-image: url(../images/reserved/reserved-img01.jpg);
+  }
+  .reserved-text1 {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    p {
+      color: #000;
+      font-size: 18px;
+      line-height: 34px;
+      letter-spacing: 0.14em;
+      font-family: 'Noto Serif JP', serif;
+    }
+  }
+  .banner a {
+    display: inline-block;
+    font-size: 30px;
+    background-color: #c4b379;
+    color: #fff;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+    cursor:pointer;
+  }
+  .recruit-phone {
+    background-color: #eeebe1;
+    position: relative;
+    display: inline-block;
+    padding: 40px 100px;
+    @media only screen and (max-width:768px) {
+      padding: 40px 50px;
+    }
+    @media only screen and (max-width:425px) {
+      padding: 40px 18px;
+    }
+    a p{
+      color: #a39154;
+      font-size: 30px;
+    }
+    .phone-p1 {
+      color: #a39154;
+      font-size: 18px;
+    }
+    .phone-p2 {
+      color: #a39154;
+      font-size: 14px;
+    }
+    span {
+      font-size: 18px;
+      color: #000;
+      background-color: #ad8c38;
+      padding: 23px 30px;
+      margin-top: 20px;
+      display: inline-block;
+      font-family: 'Noto Serif JP', serif;
+    }
+  }
+  .recruit-phone:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    display: inline-block;
+    width: 104px; /*下線の幅*/
+    height: 5px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置調整*/
+    background-color: #a39154; /*下線の色*/
+  }
+}

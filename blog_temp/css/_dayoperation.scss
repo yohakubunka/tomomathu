@@ -1,0 +1,584 @@
+ul.tabmenu {
+list-style: none;
+margin-bottom: 0px;
+border-top: none!important;
+border-bottom: none!important;
+width: 100%;
+}
+ul.tabmenu li {
+float: left;
+margin: 3px 0;
+width: 100%;
+padding: 10px;
+background-color: #f2f2f2;
+color: #666;
+cursor: pointer;
+}
+ul.tabmenu li:hover {
+color: #FF0000;
+}
+ul.tabmenu li.active {
+background-color: #c4b379;
+color: #fff;
+}
+div.tabContent {
+clear: both;
+width: 100%;
+display: none;
+}
+
+
+ul.tabmenu2 {
+list-style: none;
+margin-bottom: 0px;
+border-top: none!important;
+border-bottom: none!important;
+width: 100%;
+}
+ul.tabmenu2 li {
+float: left;
+margin: 3px 0;
+width: 100%;
+padding: 10px;
+background-color: #f2f2f2;
+color: #666;
+cursor: pointer;
+}
+ul.tabmenu2 li:hover {
+color: #FF0000;
+}
+ul.tabmenu2 li.active {
+background-color: #c4b379;
+color: #fff;
+}
+div.tabContent2 {
+clear: both;
+width: 100%;
+display: none;
+}
+div.active {
+display: block;
+}
+main#dayope {
+  section#dayope_main_visual {
+    background-image: url(../images/dayoperation/dayope-img01.jpg);
+  }
+  * {
+    //overflow: hidden;
+  }
+  .unique-characteristic {
+    @media only screen and (max-width: 767px) {
+      padding:0px 0 40px!important;
+    }
+    .col-12 {
+      margin-top: 40px;
+      border: 1px solid #c4b379;
+      padding: 40px 20px;
+      .con4-p1 {
+        font-size: 18px;
+
+      }
+      .con4-p2 {
+        margin-top: 1em;
+        font-size: 15px;
+      }
+    }
+  }
+  .con1-1 {
+    padding: 70px 70px 50px 70px;
+    @media only screen and (max-width: 991px) {
+      padding: 70px 15px 50px 15px;
+    }
+  }
+  .con1-2 {
+    padding: 40px 70px 40px 70px;
+    @media only screen and (max-width: 991px) {
+      padding: 40px 15px 40px 15px;
+    }
+  }
+  .con4-table2 {
+    margin-top: 20px;
+    width: 100%;
+    border-spacing: 0;
+    tr {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+      th {
+        background-color: #fff;
+        color: #a39154;
+        margin: 0px 4px;
+        font-size: 18px;
+        padding: 15px 40px;
+        @media only screen and (max-width: 767px) {
+          padding: 15px 10px;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 15px;
+        }
+      }
+      td {
+        border:solid 4px #eeebe1;
+        font-size: 15px;
+        letter-spacing: 0.06em;
+        background-color: #fff;
+        color: #000;
+        margin: 0px 2px;
+        font-size: 15px;
+        padding: 15px 40px;
+        @media only screen and (max-width: 767px) {
+          padding: 15px 10px;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 15px;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      tr{
+        th{
+          border-right: 5px solid #eeebe1!important;
+          border-bottom: 5px solid #eeebe1!important;
+        }
+        th:last-child{
+          border-right: 0!important;
+        }
+      }
+      tr:nth-child(2){
+        th{
+          border-bottom: 0!important;
+        }
+      }
+    }
+  }
+  .table2-outer {
+    background-color: #eeebe1!important;
+  }
+  section#dayope-about {
+    padding: 100px 0;
+  }
+
+
+  section.medical-content {
+    margin: 50px 0;
+    font-family: 'Noto Serif JP', serif;
+    @media only screen and (max-width: 1199px) {
+      background-image: url(../images/medicalcontent/medical-img07.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+    .con1-1{
+      @media only screen and (max-width: 766px) {
+        padding: 70px 0 40px;
+      }
+    }
+    .unique-characteristic {
+      .col-12 {
+        margin-top: 0px;
+        border: 1px solid #c4b379;
+        padding: 20px 20px;
+        .con4-p1 {
+          font-size: 18px;
+        }
+        .con4-p2 {
+          margin-top: 1em;
+          font-size: 15px;
+        }
+        .con4-p3 {}
+      }
+    }
+    img {
+      margin-left: 0;
+    }
+    .nomal-list {
+      border-top: none!important;
+      border-bottom: none!important;
+      list-style: none;
+      list-style-position: outside;
+    }
+    .con2-img {
+      padding: 40px 70px 50px 70px;
+      @media only screen and (max-width: 767px) {
+        padding: 40px 0px 50px 0px;
+      }
+      .row{
+        @media only screen and (max-width: 767px) {
+        display: block!important;
+      }
+      }
+    }
+    .img-list {
+      width: 620px;
+      @media only screen and (max-width: 767px) {
+        width: auto;
+      }
+      padding: 40px;
+      @media only screen and (max-width: 767px) {
+        padding: 20px 10px;
+      }
+      border: solid 1px #d3d3d3;
+      margin-bottom: 40px;
+      p {
+        font-size: 15px;
+        color: #000;
+        letter-spacing: 0.06em;
+      }
+      .s_tl{
+        font-size: 18px;
+        font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+        margin: 0 0 20px;
+        padding: 0 0 0 30px;
+        @media only screen and (max-width: 767px) {
+          padding: 0;
+        }
+      }
+      img {
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+      span {
+        color: #fff;
+        font-size: 12px;
+        padding: 1px 5px;
+        background-color: #a39154;
+        border-radius: 2px;
+        letter-spacing: 0.06em;
+      }
+      .img{
+        margin:20px 0 0;
+        img{
+          margin: 0;
+        }
+      }
+    }
+    .no-border {
+      border: none;
+      padding: 0px;
+      img {
+        max-width: 620px;
+      }
+    }
+    .container {
+      background-image: url(../images/medicalcontent/medical-img07.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+      padding: 50px 120px;
+      @media only screen and (max-width: 1199px) {
+        padding: 25px 60px;
+      }
+      @media only screen and (max-width: 1199px) {
+        padding: 50px 0px;
+        background-image: none;
+      }
+      @media only screen and (max-width: 575px) {
+        padding: 25px 60px;
+      }
+      @media only screen and (max-width: 425px) {
+        padding: 25px 20px;
+      }
+      .row {
+        background-color: #fff;
+      }
+      .bg-ini {
+        background-color: #fff0;
+      }
+    }
+    h3 {
+      color: #000;
+      font-size: 28px;
+      letter-spacing: 0.06em;
+      margin-bottom: 40px;
+      font-family: 'Noto Serif JP', serif;
+    }
+    .con1-1 {
+      padding: 70px 70px 40px 70px;
+      @media only screen and (max-width: 991px) {
+        padding: 70px 15px 40px 15px;
+      }
+    }
+    .con1-p1 {
+      font-size: 24px;
+      letter-spacing: 0.06em;
+      color: #a39154;
+      margin-bottom: 1em;
+      line-height: 32px;
+      font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+    }
+    .con1-p2 {
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: #000;
+      line-height: 30px;
+      span {
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        color: #a39154;
+      }
+    }
+    h4 {
+      font-size: 24px;
+      letter-spacing: 0.06px;
+      color: #a39154;
+      margin: 25px 0;
+      font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
+    }
+
+    ul {
+      border-top: 1px solid #a39154;
+      border-bottom: 1px solid #a39154;
+      padding: 15px 0;
+      margin-bottom: 60px;
+      p {
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        color: #000;
+      }
+      li {
+        font-size: 15px;
+        letter-spacing: 0.06em;
+        color: #000;
+        padding: 0 0 0 8px;
+        line-height: 30px;
+        font-family: YuGothic,'Yu Gothic',sans-serif;
+      }
+    }
+    .lens-list {
+      tr {
+        th {
+          color: #000;
+          font-size: 15px;
+          background-color: #fff;
+        }
+      }
+      .list-brown {
+        color: #fff;
+        background-color: #c4b379;
+      }
+    }
+
+
+
+  }
+  section#medical-content1 {
+  }
+  section#medical-content2 {
+  }
+}
+// ユーチューブ部分
+.day_youtu{
+  padding:40px 0px 40px 93px!important;
+  margin: 3rem 0 30px 0!important;
+  @media only screen and (max-width: 767px) {
+    padding:0 !important;
+  }
+  .col-md-12{
+    padding: 0;
+  }
+  iframe{
+    width:100%;
+    height:554px;
+    @media only screen and (max-width: 767px) {
+      padding:0 !important;
+      height: 300px;
+    }
+  }
+}
+// h4のズレ修正
+.zure{
+  margin: 25px 0 25px -15px!important;
+}
+// 手術詳細
+.detail {
+	div.row{
+		div.col-12 {
+      padding: 0;
+			.s_tl {
+			}
+		}
+		div.col-md-7 {
+      padding: 0;
+      max-width: 310px!important;
+      @media only screen and (max-width: 767px) {
+        margin: 0 auto 10px;
+      }
+			img {
+			}
+		}
+		div.col-md-5 {
+      max-width: 217px;
+      padding: 0 0 0 20px;
+      @media only screen and (max-width: 767px) {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+			p.con4-p2 {
+			}
+		}
+    .col-md-5_2{
+      max-width: 230px!important;
+      padding: 0!important;
+      @media only screen and (max-width: 767px) {
+        max-width: 100%!important;
+        padding: 0 20px!important;
+      }
+    }
+    .col-md-5_3{
+      max-width: 225px!important;
+      @media only screen and (max-width: 767px) {
+        max-width: 100%!important;
+        padding: 0 20px!important;
+      }
+    }
+	}
+}
+// 見出し文章の修正
+.col-12{
+  .txt2{
+    font-size: 18px!important;
+    font-family: YuGothic,'Yu Gothic',sans-serif!important;
+  }
+}
+//アド眼内レンズ修正
+.adrenzu{
+  padding:15px 70px!important;
+    @media only screen and (max-width: 1365px) {
+      padding: 0!important;
+      margin: 0 0 1rem;
+}
+  .col-md-12{
+    padding: 0;
+  }
+}
+.adre_cont {
+	div.row.img-list.w-sm-100 {
+    @media only screen and (max-width: 575px) {
+		div.col-sm-4 {
+      margin: 0 0 20px;
+			img {
+        margin: 0 auto 10px!important;
+			}
+			p.text-left {
+			}
+		}
+  }
+	}
+}
+//隙間修正
+#dayope{
+  .row {
+    background-color: #fff;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  @media only screen and (max-width: 767px) {
+  .col-12{
+    padding: 0;
+  }
+}
+}
+@media only screen and (max-width: 767px) {
+//多焦点眼内レンズの種類（当院ラインナップ）の修正
+.lineup{
+  margin-right: -15px!important;
+  margin-left: -15px!important;
+}
+//手術について修正
+.about-content01{
+  margin-right: -15px!important;
+  margin-left: -15px!important;
+}
+.s_txt{
+  padding:70px 0 40px 10px!important;
+  margin-left: -10px!important;
+  background: #fff;
+}
+}
+//medical-content2のテキスト修正
+#medical-content2{
+.unique-characteristic_2{
+  padding: 0!important;
+  .col-12 {
+    border: 1px solid #c4b379;
+    padding: 40px 20px;
+    .con4-p1 {
+      font-size: 18px;
+
+    }
+    .con4-p2 {
+      margin-top: 1em;
+      font-size: 15px;
+    }
+  }
+}
+}
+
+// 多焦点眼内レンズの種類
+div.renzu_tb_wrap {
+  padding: 50px;
+  background: #eeebe1;
+  margin: 0 auto 30px -15px;
+  width: calc(100% + 30px);
+  @media only screen and (max-width: 767px) {
+    padding: 30px 5%;
+  }
+	table.renzu_tb {
+    border-spacing: 0;
+		tbody {
+      font-family: YuGothic,'Yu Gothic',sans-serif;
+			tr {
+				th.list-brown {
+          background: #c4b379;
+          color: #fff;
+          width: 100px;
+          font-size: 18px!important;
+          font-weight: bold;
+				}
+				th.p-0 {
+          border-top: 0;
+					img.mx-auto {
+					}
+				}
+				th {
+          border-right: 10px solid #eeebe1;
+          border-top: 10px solid #eeebe1;
+          background: #fff;
+          width: 128px;
+          text-align: center;
+					span {
+            display: block;
+            margin: 0 0 15px;
+            letter-spacing: 0;
+					}
+				}
+        th:last-child{
+          border-right: 0;
+        }
+			}
+      tr:nth-child(2){
+        th{
+          padding: 15px 5px;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: -0.11em;
+        }
+      }
+      tr:nth-child(3){
+        th{
+          padding: 23px 0;
+          font-size: 15px;
+        }
+      }
+		}
+	}
+}
+div.renzu_tb_wrap:nth-child(2){
+  table.renzu_tb {
+    tbody {
+      tr {
+        th {
+          width: 105px;
+        }
+      }
+    }
+  }
+}

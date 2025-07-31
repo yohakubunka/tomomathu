@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="8" viewBox="0 0 19 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c4b379;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <image id="長方形_572" data-name="長方形 572" width="19" height="8" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAICAYAAAAbQcSUAAAAeUlEQVQokWM8srmSgRhg7dOGourolipGBgaG/8hiLESZBNEMZ0MNVmdgYLjLwMDwGybORKxhWAx+y8DAkIcsTpZhUPCagYHhHgMDgx01DAOB9QwMDM4MDAx81DAMBHoZGBgKqWXYJwYGhgMMDAz+oNhEiV6yAQMDAwBGqhVWe+ESdAAAAABJRU5ErkJggg=="/>
+  <path id="シェイプ_1" data-name="シェイプ 1" class="cls-1" d="M12.6,0.3l0.8-.6,6,8-0.8.6Z"/>
+</svg>

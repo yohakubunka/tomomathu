@@ -1,0 +1,12 @@
+.f_about table tr.tlb th {
+  text-align: center!important;
+}
+.f_about table tr td.close {
+  float: initial!important;
+  opacity: 1;
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px!important;
+  }
+}

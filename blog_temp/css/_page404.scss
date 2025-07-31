@@ -1,0 +1,19 @@
+main.page404 {
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    section.page404-inner {
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 100%;
+        background: #f6f4ed;
+        text-align: center;
+        padding: 40px;
+        .backhome {
+            color: #ad8c38;
+            margin-top: 16px;
+        }
+    }
+}

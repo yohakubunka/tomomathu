@@ -1,0 +1,147 @@
+main#flow {
+  section#flow_main_visual {
+    background-image: url(../images/flow/flow-img01.png);
+  }
+  section.flow-main-content {
+    padding: 100px 0;
+    .container {
+      padding: 100px 100px;
+      background-color: #eeebe1;
+      @media only screen and (max-width:767px) {
+        padding: 0px 30px;
+        padding-bottom: 50px;
+      }
+    }
+    .hidden425 {
+      display: block;
+    }
+    .hidden-off-425 {
+      display: none;
+    }
+    @media only screen and (max-width:425px) {
+      .hidden425 {
+        display: none;
+      }
+      .hidden-off-425 {
+        display: block;
+      }
+    }
+    .card-box {
+      margin-top: 100px;
+      position: relative;
+      @media only screen and (max-width:767px) {
+        margin-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .left-content {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 20px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 50px;
+        @media only screen and (max-width:767px) {
+          margin-left: 0px;
+          padding: 50px 25px;
+        }
+        .flow-number {
+          position: absolute;
+          top: -12px;
+          left:-12px;
+          font-size: 14px;
+          color: #c4b379;
+          padding: 6px 20px 6px 10px;
+          background-color: #000;
+          border-left: 4px solid #c4b379;
+        }
+        h3 {
+          color: #a39154;
+          font-family: 'Noto Serif JP', serif;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        h4 {
+          font-size: 18px;
+          line-height: 18px;
+          letter-spacing: 0.2em;
+          color: #000;
+          margin: 0 0 20px;
+          font-weight: bold;
+        }
+        .flow-con-p1 {
+          font-size: 15px;
+          line-height: 30px;
+          letter-spacing: 0.1em;
+          color: #000;
+          margin-bottom: 35px;
+        }
+        .flow-con-a1 p {
+          color: #a39154;
+          line-height: 27px;
+          letter-spacing: 0.1em;
+          font-size: 18px;
+        }
+        .flow-con-p2 {
+          color: #000;
+          line-height: 17px;
+          letter-spacing: 0.1em;
+          font-size: 15px;
+          tr {
+            td {
+              font-family: YuGothic,'Yu Gothic',sans-serif;
+            }
+          }
+        }
+        .flow-con-p3 {
+          color: #000;
+          line-height: 22px;
+          letter-spacing: 0.2em;
+          font-size: 13px;
+        }
+        .flow-con-p4 {
+          font-size: 15px;
+          line-height: 30px;
+          letter-spacing: 0.1em;
+          color: #000;
+          margin-bottom: 0px;
+        }
+        .flow-con-a2{
+          display: inline-block;
+          margin-top: 15px;
+          span {
+           color: #000;
+           background-color: #c4b379;
+           font-size: 14px;
+           padding: 10px 50px;
+           margin-top: 15px;
+           font-weight: bold;
+           @media only screen and (max-width:425px) {
+             padding: 10px 25px;
+           }
+         }
+        }
+      }
+      img {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        z-index: 2;
+      }
+    }
+    .card-box1 {
+      margin-top: 0px;
+    }
+    .col-12{
+      img{
+        @media only screen and (max-width:766px) {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.flow-con-p1_2{
+  margin: 0 0 20px!important;
+}

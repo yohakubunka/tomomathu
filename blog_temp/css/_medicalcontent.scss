@@ -1,0 +1,420 @@
+html {
+  scroll-behavior: smooth;
+}
+main#medical {
+  * {
+    overflow: hidden;
+  }
+  section#medical_main_visual {
+    background-image: url(../images/medicalcontent/medical-img01.png);
+  }
+  section#medical-about {
+    padding-top: 100px;
+    .about-content02 {
+      padding: 70px 0;
+      .about2-col {
+        background-color: #eeebe1;
+        @media only screen and (max-width: 767px) {
+          margin: 0 0 20px;
+        }
+        .row {
+          padding: 0 0 30px;
+          h3 {
+            color: #fff;
+            background-color: #a39154;
+            display: block;
+            padding: 20px 0;
+            font-family: "Noto Serif JP", serif;
+            margin-bottom: 0px;
+          }
+          .about2-col-left {
+            padding: 30px 0px 0px 30px;
+            @media only screen and (max-width: 767px) {
+              padding: 15px 0px 0px 30px;
+            }
+          }
+          .about2-col-right {
+            padding: 30px 30px 0 0;
+            @media only screen and (max-width: 767px) {
+              padding: 0px 0px 0px 30px;
+            }
+          }
+          ul {
+            li {
+              font-size: 15px;
+              line-height: 27px;
+              padding: 0 0 0 20px;
+              text-indent: -20px;
+              span {
+                font-size: 12px;
+              }
+            }
+            li:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  section#medical_page_ank_navi {
+    background-color: #a39154;
+    ul {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 30px;
+      list-style: none;
+      li {
+        display: inline-block;
+        text-align: center;
+        a {
+          color: #000;
+          font-size: 18px;
+        }
+      }
+      li + li {
+        span {
+          border-left: 1px solid #000;
+        }
+      }
+      span {
+        margin-bottom: 5px;
+        padding: 0 1em;
+        font-family: "Noto Serif JP", serif;
+      }
+    }
+  }
+  section.medical-content {
+    margin: 100px 0;
+    font-family: "Noto Serif JP", serif;
+    @media only screen and (max-width: 1199px) {
+      background-image: url(../images/medicalcontent/medical-img07.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+    }
+    .container {
+      background-image: url(../images/medicalcontent/medical-img07.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+      padding: 50px 120px;
+      @media only screen and (max-width: 1199px) {
+        padding: 25px 60px;
+      }
+      @media only screen and (max-width: 1199px) {
+        padding: 50px 0px;
+        background-image: none;
+      }
+      @media only screen and (max-width: 575px) {
+        padding: 25px 60px;
+      }
+      @media only screen and (max-width: 425px) {
+        padding: 25px 30px;
+      }
+      .row {
+        background-color: #fff;
+      }
+      .bg-ini {
+        background-color: #fff0;
+      }
+    }
+    h3 {
+      color: #000;
+      font-size: 48px;
+      letter-spacing: 0.06em;
+      margin-bottom: 40px;
+      font-family: "Noto Serif JP", serif;
+    }
+    .con1-1 {
+      padding: 70px 70px 50px 70px;
+      @media only screen and (max-width: 991px) {
+        padding: 70px 0px 50px 0px;
+      }
+    }
+    .con1-p1 {
+      font-size: 24px;
+      letter-spacing: 0.06em;
+      color: #a39154;
+      margin-bottom: 1em;
+      line-height: 32px;
+    }
+    .con1-p2 {
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      color: #000;
+      line-height: 30px;
+      span {
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        color: #a39154;
+      }
+    }
+    h4 {
+      font-size: 32px;
+      letter-spacing: 0.06px;
+      color: #a39154;
+      margin: 50px 0;
+    }
+    ul {
+      border: 1px solid #a39154;
+      padding: 20px 25px;
+      margin-bottom: 60px;
+      li:first-child {
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        color: #000;
+        line-height: 34px;
+      }
+      li {
+        font-size: 15px;
+        letter-spacing: 0.06em;
+        color: #000;
+        line-height: 23px;
+      }
+    }
+  }
+  section#medical-content1 {
+  }
+  section#medical-content2 {
+    .con2-img {
+      padding: 50px 70px 50px 70px;
+      @media only screen and (max-width: 767px) {
+        padding: 50px 0px 50px 0px;
+      }
+      .img-list {
+        padding: 30px 40px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16);
+        margin-bottom: 40px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 585px;
+        p {
+          font-size: 15px;
+          color: #000;
+          letter-spacing: 0.06em;
+        }
+        img {
+          margin-bottom: 10px;
+        }
+        span {
+          color: #fff;
+          font-size: 12px;
+          padding: 1px 5px;
+          background-color: #a39154;
+          border-radius: 2px;
+          letter-spacing: 0.06em;
+        }
+        @media only screen and (max-width: 575px) {
+          p {
+            margin-bottom: 20px;
+          }
+          img {
+            margin: 0px auto;
+          }
+          br {
+            display: none;
+          }
+          span {
+            display: inline-block;
+            margin: 15px 0;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  section#medical-content3 {
+    .con2-img {
+      padding: 30px 70px 0px 70px;
+      @media only screen and (max-width: 575px) {
+        padding: 0px;
+      }
+      .img-list {
+        padding: 0px 40px;
+        margin-bottom: 40px;
+        p {
+          font-size: 15px;
+          color: #000;
+          letter-spacing: 0.06em;
+        }
+        img {
+          margin-bottom: 10px;
+        }
+        span {
+          color: #fff;
+          font-size: 12px;
+          padding: 1px 5px;
+          background-color: #a39154;
+          border-radius: 2px;
+          letter-spacing: 0.06em;
+        }
+      }
+    }
+  }
+  section#medical-content3 {
+    .row {
+      @media only screen and (max-width: 767px) {
+      }
+    }
+  }
+  section#medical-content4 {
+    @media only screen and (max-width: 767px) {
+      img {
+        margin: 30px;
+      }
+    }
+    .con1-p1 span {
+      font-size: 20px;
+    }
+    .row {
+      padding: 0px 70px;
+      @media only screen and (max-width: 767px) {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+    .con4-table1 {
+      margin-top: 20px;
+      tr {
+        margin-bottom: 10px;
+        td {
+          font-size: 15px;
+          letter-spacing: 0.06em;
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .table2-outer {
+      background-color: #eeebe1;
+    }
+    .con4-table2 {
+      margin-top: 20px;
+      width: 100%;
+      tr {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        th {
+          border: solid 4px #eeebe1;
+          letter-spacing: 0.06em;
+          background-color: #fff;
+          color: #a39154;
+          margin: 0px 2px;
+          font-size: 18px;
+          padding: 15px 40px;
+          @media only screen and (max-width: 767px) {
+            padding: 15px 10px;
+          }
+          @media only screen and (max-width: 575px) {
+            font-size: 15px;
+          }
+        }
+        td {
+          border: solid 4px #eeebe1;
+          letter-spacing: 0.06em;
+          background-color: #fff;
+          color: #000;
+          margin: 0px 2px;
+          font-size: 15px;
+          padding: 15px 40px;
+          @media only screen and (max-width: 767px) {
+            padding: 15px 10px;
+          }
+          @media only screen and (max-width: 575px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .unique-characteristic {
+      .col-12 {
+        margin-top: 40px;
+        border: 1px solid #c4b379;
+        padding: 40px 20px;
+        .con4-p1 {
+          font-size: 18px;
+        }
+        .con4-p2 {
+          margin-top: 1em;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+// 見え方の変化の項目修正
+.miekata {
+  div.row.img-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 40px 40px 40px !important;
+    @media only screen and (max-width: 767px) {
+      display: block;
+      padding: 20px 4%;
+    }
+    div.col-12 {
+      width: 100%;
+      margin: 0 0 20px;
+      padding: 0;
+      p {
+      }
+    }
+    div.box {
+      width: 144px;
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        margin: 0 0 10px;
+      }
+      img {
+      }
+      span {
+      }
+    }
+    .box1 {
+      margin: 0 0 0 10px;
+      @media only screen and (max-width: 767px) {
+        margin: 0 0 10px;
+      }
+    }
+    .box3 {
+      margin: 0 10px 0 0;
+      @media only screen and (max-width: 767px) {
+        margin: 0 !important;
+      }
+    }
+  }
+  p.con1-p1 {
+  }
+  p.con1-p2 {
+  }
+}
+//まぶたの病気タイトル修正
+#medical-content4 {
+  .bg-ini {
+    padding: 0 !important;
+  }
+}
+//オルソケラトロジー追加
+#medical-content5 {
+  .orthokeratology-txt {
+    p {
+      br {
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+  }
+  ul {
+    margin-bottom: 32px !important;
+  }
+  .second-year {
+    margin-top: 50px;
+    .col-md-11 {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

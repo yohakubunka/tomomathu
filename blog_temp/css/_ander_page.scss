@@ -1,0 +1,30 @@
+html{
+  scroll-behavior: smooth;
+}
+section#medical_page_ank_navi {
+  background-color: #a39154;
+  ul {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    list-style: none;
+    li {
+      display: inline-block;
+      text-align: center;
+      a {
+        color: #000;
+        font-size: 18px;
+      }
+    }
+    li+ li {
+      span {
+        border-left: 1px solid #000;
+      }
+    }
+    span {
+      margin-bottom: 5px;
+      padding: 0 1em;
+      font-family: 'Noto Serif JP', serif;
+    }
+  }
+}

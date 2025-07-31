@@ -1,0 +1,300 @@
+html{
+  scroll-behavior: smooth;
+  /*font-size: 10px;
+  @media only screen and (max-width: 991px) {
+    font-size: 8px;
+  }
+  @media only screen and (max-width: 374px) {
+    font-size: 7px;
+  }*/
+}
+body {
+  //font-size: 1.6rem;
+}
+p{
+  font-family: YuGothic,'Yu Gothic',sans-serif;
+  margin: 0;
+}
+ul{
+  margin: 0;
+}
+section#medical_page_ank_navi {
+  background-color: #a39154;
+  ul {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    list-style: none;
+    li {
+      display: inline-block;
+      text-align: center;
+      a {
+        color: #000;
+        font-size: 15px;
+      }
+    }
+    li+ li {
+      span {
+        border-left: 1px solid #000;
+      }
+    }
+    span {
+      margin-bottom: 5px;
+      padding: 0 1em;
+      font-family: 'Noto Serif JP', serif;
+    }
+  }
+}
+section#dayope_page_ank_navi_sp {
+  background-color: #a39154;
+  .acd-check{
+      display: none;
+  }
+  .acd-label{
+      color: #fff;
+      display: block;
+      margin-bottom: 1px;
+      padding: 10px;
+      font-size: 20px;
+  }
+  .acd-content{
+      border-top: 1px solid #333;
+      height: 0;
+      opacity: 0;
+      padding: 0 10px;
+      transition: .5s;
+      visibility: hidden;
+  }
+  .acd-check:checked + .acd-label + .acd-content{
+      height: auto;
+      max-height: 310px;
+      opacity: 1;
+      padding: 10px;
+      visibility: visible;
+  }
+  ul {
+    li {
+      font-size: 16px;
+      margin-bottom: 0.5em;
+      a {
+        color: #fff;
+        font-size: 16px;
+        span {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+// under_h2
+h2.under_h2 {
+	text-align: center;
+	margin: 0 0 90px;
+	position: relative;
+	p {
+		font-family: 'Terminal';
+		color: $second;
+		font-size: 40px;
+		line-height: 48px;
+		margin: 0 0 15px;
+    @media only screen and (max-width: 1365px) {
+      line-height: 120%;
+    }
+		@media only screen and (max-width:766px) {
+			font-size: 2.5rem;
+		}
+	}
+	span {
+		font-size: 18px;
+		font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+		color: #000;
+		@media only screen and (max-width:766px) {
+			font-size: 1.45rem;
+		}
+	}
+}
+
+// about-content01
+.about-content01 {
+  position: relative;
+  .left-content {
+    margin-top: 75px;
+    padding: 70px 70px 70px 70px;
+    border: 10px solid #c4b379;
+    position: relative;
+    z-index: 3;
+    @media only screen and (max-width: 575px) {
+      padding: 70px 30px 70px 30px;
+      margin: 0px 35px;
+    }
+    @media only screen and (max-width: 375px) {
+      margin: 0px 15px;
+      padding: 70px 10px 70px 10px;
+    }
+    h3 {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: 0.12em;
+      color: #c4b379;
+      font-weight: bold;
+      display: inline-block;
+      @media only screen and (max-width: 991px) {
+        font-size: 32px!important;
+      }
+      @media only screen and (max-width: 514px) {
+        font-size: 24px!important;
+      }
+      span {
+        font-size: 18px;
+        color: #000;
+        font-family: 'Noto Serif JP', serif;
+        font-weight: normal;
+        @media only screen and (max-width: 991px) {
+          font-size: 14.4px!important;
+        }
+        @media only screen and (max-width: 514px) {
+          font-size: 12.6px!important;
+        }
+      }
+      p.medical-con-p2{
+        font-size: 15px!important;
+        @media only screen and (max-width: 991px) {
+          font-size: 12px!important;
+        }
+        @media only screen and (max-width: 514px) {
+          font-size: 10.5px!important;
+        }
+      }
+    }
+    .medical-con-p1 {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.08em;
+      color: #a39154;
+      font-family: 'Noto Serif JP', serif;
+      margin-top: 40px;
+    }
+    .medical-con-p2 {
+      margin-top: 30px;
+      font-size: 15px;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+      color: #000;
+      font-family: 'Noto Serif JP', serif;
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 47%;
+  }
+}
+
+.about-content01-sp {
+  @media only screen and (max-width: 575px) {
+    margin: 0px 20px;
+  }
+  @media only screen and (max-width: 375px) {
+    margin: 0px;
+  }
+}
+
+// アンダーページsection上の余白
+.under_cont{
+  section{
+    padding: 100px 0 0;
+  }
+}
+
+#medical_page_ank_navi{
+  padding: 0;
+}
+section#dayope_page_ank_navi_sp {
+  padding: 0px!important;
+}
+
+.vertical-rl span {
+  writing-mode: vertical-rl;
+    -webkit-writing-mode:vertical-rl;
+}
+.vertical-rl {
+  span {
+    padding: 20px 10px;
+    background-color: #fff9e5;
+    font-size: 24px;
+    @media only screen and (max-width: 767px) {
+      writing-mode: initial;
+      display: inline-block;
+      margin-bottom: 15px;
+      background-color: #fff0;
+      padding: 10px 0px;
+    }
+  }
+}
+#{unquote('_:-ms-input-placeholder, :root')} .vertical-rl span {
+  -ms-writing-mode: tb-rl;
+}
+#{unquote('_:-ms-input-placeholder, :root')} .vertical-rl span {
+  -ms-writing-mode: tb-rl;
+}
+
+//main visual
+section.no-index-page-sec {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    max-width: 1620px;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 40px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    @media only screen and (max-width:1660px) {
+      padding: 0 20px;
+    }
+    img {
+      margin: 0!important;
+      @media only screen and (max-width:1820px) {
+        width: 190px;
+      }
+      @media only screen and (max-width:1410px) {
+        width: 140px;
+      }
+    }
+  }
+
+  .visual_text {
+    h2 {
+      text-align: center;
+      color: #c4b379;
+      font-size: 48px;
+      padding-top: 260px;
+      padding-bottom: 180px;
+      @media only screen and (max-width: 1365px) {
+        padding-top: 180px;
+      }
+      @media only screen and (max-width: 425px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      span {
+        color: #fff;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+// mvロゴレスポンシブ用
+@media only screen and (min-width:1410px) {
+  .tab2 {
+    display: none !important;
+  }
+}

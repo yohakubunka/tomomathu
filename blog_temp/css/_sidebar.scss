@@ -1,0 +1,298 @@
+$second: #c4b379;
+
+div.s_fix {
+	position: fixed;
+	right: 0;
+	bottom: 90px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+	z-index: 30;
+
+	@media all and (-ms-high-contrast: none) {
+		height: 348px;
+	}
+
+	div.crose {
+		padding: 10px;
+		position: relative;
+		width: 0;
+		opacity: 0;
+		background: rgba(17, 20, 22, 0.5);
+
+		p {
+			color: #fff;
+			text-align: center;
+			writing-mode: vertical-rl;
+			-ms-writing-mode: tb-rl;
+			-webkit-writing-mode: vertical-rl;
+			position: absolute;
+			left: auto;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			font-size: 15px;
+			width: 15px;
+			line-height: 15px;
+
+			i.fas.fa-caret-right {
+				margin: 10px 0 0;
+			}
+		}
+	}
+
+	div.box {
+		padding: 5px;
+		background: rgba(17, 20, 22, 0.5);
+
+		div.bt {
+			a {
+				color: #000;
+				padding: 23px 13px;
+				display: block;
+				font-size: 18px;
+			}
+
+			i {
+				margin-right: 10px;
+			}
+		}
+
+		.bt:hover {
+			opacity: 0.6;
+		}
+
+		div.bt:nth-child(1) {
+			background: #b88f3f;
+		}
+
+		div.bt:nth-child(2) {
+			background: #c4b379;
+		}
+
+		div.bt:nth-child(3) {
+			background: #d6ceb4;
+		}
+
+		p.tell {
+			margin-top: 10px;
+			font-size: 21px;
+			text-align: center;
+			color: #fff;
+		}
+
+		p.txt {
+			text-align: left;
+			color: #fff;
+			font-size: 12px;
+			line-height: 17px;
+		}
+	}
+}
+
+.s_transform {
+	transform: translateX(186px);
+
+	.open {
+		opacity: 1 !important;
+		width: 80px !important;
+
+		.c_bt {
+			height: calc(100% / 3);
+			font-size: 25px;
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		.c_bt:nth-child(1) {
+			background: #b88f3f;
+		}
+
+		.c_bt:nth-child(2) {
+			background: #c4b379;
+		}
+
+		.c_bt:nth-child(3) {
+			background: #d6ceb4;
+		}
+	}
+}
+
+div.s_fix:hover {
+	transform: none !important;
+
+	.open {
+		opacity: 0 !important;
+	}
+}
+
+// 固定フッター
+div.s_fix_sp {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 30;
+
+	div.box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media only screen and (max-width:540px) {
+			flex-wrap: wrap;
+		}
+
+		div.bt {
+			width: calc(100% / 3);
+			text-align: center;
+
+			a {
+				display: block;
+				padding: 20px 0;
+				font-size: 2.5vw;
+				font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+				color: #333333;
+
+				@media only screen and (max-width:540px) {
+					font-size: 3.5vw;
+				}
+
+				i {
+					margin: 0 2% 0 0;
+				}
+			}
+
+			a:hover {
+				color: #333333;
+				text-decoration: none;
+			}
+		}
+
+		.bt:nth-child(1) {
+			background: #b88f3f;
+		}
+
+		.bt:nth-child(2) {
+			background: #c4b379;
+		}
+
+		.bt:nth-child(3) {
+			background: #d6ceb4;
+		}
+	}
+}
+
+.tel_wrap {
+	background-color: #000;
+	position: fixed;
+	right: 24px;
+	bottom: 90px;
+	overflow: hidden;
+	border-radius: 100px 100px 0 100px;
+	transition: width 0.3s ease;
+	width: 100px;
+	box-shadow: 0 0 6px rgba(142, 142, 142, 0.6);
+	cursor: pointer;
+
+
+
+	.js_contact_btn .tel_icon {
+		font-size: 32px;
+		padding: 0 18px;
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover {
+		width: 541px;
+
+		.js_contact_btn .tel_icon {
+			display: none;
+		}
+
+	}
+}
+
+
+.js_contact_btnInner {
+	display: flex;
+	align-items: center;
+	height: 100px;
+	color: #fff;
+	position: relative;
+	padding: 26px 20px 26px 26px;
+
+	a {
+		display: flex;
+	}
+}
+
+.js_contact_btnTxt {
+	white-space: nowrap;
+	opacity: 0;
+	transform: translateX(20px);
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+
+	.tel_num {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	p,
+	i {
+		color: #fff;
+		font-size: 2.4rem;
+
+	}
+
+	.reception_wrap {
+		padding-left: 16px;
+		border-left: solid 1px #fff;
+
+		.reception {
+			display: flex;
+			align-items: center;
+			margin-bottom: 4px;
+			gap: 10px;
+
+
+
+			.title {
+				font-size: 1.6rem;
+			}
+
+			.time_wrap {
+				p {
+					font-size: 1.2rem;
+				}
+
+				span {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.first {
+			font-size: 1rem;
+		}
+	}
+}
+
+.tel_wrap:hover .js_contact_btnTxt {
+	opacity: 1;
+	transform: translateX(0);
+
+}
