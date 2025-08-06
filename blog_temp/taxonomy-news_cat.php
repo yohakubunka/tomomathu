@@ -1,13 +1,13 @@
 <span id="hidden_nav_bg">
-<? get_header(); ?>
+  <? get_header(); ?>
 </span>
 <main id="news_list" class="no-index-page">
   <section id="news_list_main_visual" class="no-index-page-sec">
-    <div class="news_list_logo">
+    <!-- <div class="news_list_logo">
       <h1 class="pc2">
-        <img src="<?php echo get_template_directory_uri();?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
       </h1>
-    </div>
+    </div> -->
     <div class="visual_text">
       <h2>NEWS<br><span>新着情報</span></h2>
     </div>
@@ -17,40 +17,42 @@
       <div class="row">
         <div class="col-md-2 left-nav" style="color:#fff;">
           <h3>CATEGORY</h3>
-        <ul class="collapse_category_list ul-a">
-          <li class="cat-item cat-item-2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>news/">すべて</a></li>
-        <?php
-         $categories = wp_list_categories('title_li=&show_count=1&taxonomy=news_cat&echo=0');
-         $categories = preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="count">\\1</span></a>', $categories);
-         echo $categories;
-          ?>
-        </ul>
-        <h3 style="margin-top:50px;">ARCHIVE</h3>
-        <ul class="className">
-          <?php wp_get_archives('type=monthly&post_type=news'); ?>
-        </ul>
+          <ul class="collapse_category_list ul-a">
+            <li class="cat-item cat-item-2"><a href="<?php echo esc_url(home_url('/')); ?>news/">すべて</a></li>
+            <?php
+            $categories = wp_list_categories('title_li=&show_count=1&taxonomy=news_cat&echo=0');
+            $categories = preg_replace('/<\/a> \(([0-9]+)\)/', ' <span class="count">\\1</span></a>', $categories);
+            echo $categories;
+            ?>
+          </ul>
+          <h3 style="margin-top:50px;">ARCHIVE</h3>
+          <ul class="className">
+            <?php wp_get_archives('type=monthly&post_type=news'); ?>
+          </ul>
         </div>
         <div class="col-md-10 archive-area">
           <?php
-               if ( have_posts() ) :
-                 $label = $options['event_archive_headline'];
+          if (have_posts()) :
+            $label = $options['event_archive_headline'];
           ?>
-            <?php while ( have_posts() ) : the_post(); ?>
+            <?php while (have_posts()) : the_post(); ?>
               <?php
-              $terms = wp_get_object_terms($post->ID,'news_cat');
-              foreach($terms as $term){
+              $terms = wp_get_object_terms($post->ID, 'news_cat');
+              foreach ($terms as $term) {
                 $cat = $term->name;
                 $slug = $term->slug;
               }
               ?>
               <div class="archive-part">
-                <p class="all-data"><span class="time-data"><?php echo get_the_date( 'Y.m.d' ); ?></span><span class="archive-cateogory"><?php echo $cat;?></span></p>
+                <p class="all-data"><span class="time-data"><?php echo get_the_date('Y.m.d'); ?></span><span class="archive-cateogory"><?php echo $cat; ?></span></p>
                 <p class="archive-title"><?php the_title(); ?></p>
                 <p class="archive-content"><?php the_content(); ?></p>
               </div>
             <?php endwhile; ?>
           <?php endif; ?>
-          <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
+          <?php if (function_exists('wp_pagenavi')) {
+            wp_pagenavi();
+          } ?>
         </div>
       </div>
     </div>

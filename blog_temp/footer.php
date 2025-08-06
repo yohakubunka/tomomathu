@@ -5,11 +5,11 @@ $td = get_template_directory_uri();
 $hm = get_home_url();
 ?>
 <!-- pagetop -->
-<div class="page_top">
+<!-- <div class="page_top">
   <a href="#">
     <i class="fas fa-arrow-up"></i>
   </a>
-</div>
+</div> -->
 <!-- /pagetop -->
 <!-- bgm -->
 <audio src="<?= get_template_directory_uri() ?>/audio/maou.mp3" id="audio" pause="pause" loop="loop"></audio>
@@ -49,7 +49,7 @@ $hm = get_home_url();
             <td class="syu">手術</td>
             <td>●</td>
             <td class="syu">●<br>
-            <span>（完全予約制）</span>
+              <span>（完全予約制）</span>
             </td>
             <td>/</td>
           </tr>
@@ -76,7 +76,7 @@ $hm = get_home_url();
     </div>
   </div>
   <div class="box">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2738.4296512245664!2d136.88053922403986!3d35.29206380551945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030b8f4d398899%3A0x2ae103d8288e70cd!2z44Go44KC44G-44Gk55y856eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1678178584634!5m2!1sja!2sjp" height="100%" frameborder="0" style="border:0;width:100%;" allowfullscreen=""></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2738.4296512245664!2d136.88053922403986!3d35.29206380551945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030b8f4d398899%3A0x2ae103d8288e70cd!2z44Go44KC44G-44Gk55y856eR44Kv44Oq44OL44OD44Kv!5e0!3m2!1sja!2sjp!4v1678178584634!5m2!1sja!2sjp" height="100%" frameborder="0" style="border:0;width:100%;" allowfullscreen=""></iframe>
   </div>
 </section>
 <!-- /f_about -->
@@ -309,7 +309,7 @@ $hm = get_home_url();
 <script type="text/javascript">
 </script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/scroll_BG.js"></script>
-<?php if ( is_home() || is_front_page() ) : ?>
+<?php if (is_home() || is_front_page()) : ?>
   <script src="<?php echo get_template_directory_uri(); ?>/js/opening.js"></script>
 <?php endif; ?>
 <?php wp_footer(); ?>

@@ -22,11 +22,11 @@ define("title", "医院案内｜ともまつ眼科クリニック");
 <!-- facility -->
 <main id="facility" class="no-index-page under_cont">
   <section id="flow_main_visual" class="no-index-page-sec">
-    <div class="news_list_logo">
+    <!-- <div class="news_list_logo">
       <h1 class="pc2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
       </h1>
-    </div>
+    </div> -->
     <div class="visual_text">
       <h2>FACILITY<br><span>医院案内</span></h2>
     </div>
@@ -467,7 +467,7 @@ define("title", "医院案内｜ともまつ眼科クリニック");
           <div class="tl_sub">◆受付時間・診療時間</div>
           <p class="txt">
             平日受付時間:09：00〜14：30<br>土曜受付時間：09:00~11:00 <br>
-            平日診療時間:09：00〜15：00<br>土曜診療時間：09:00~12:30（完全予約制）	
+            平日診療時間:09：00〜15：00<br>土曜診療時間：09:00~12:30（完全予約制）
           </p>
           <div class="tl_sub">◆休診日</div>
           <p class="txt">土曜午後、日曜、祝日</p>

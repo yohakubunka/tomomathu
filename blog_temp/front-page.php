@@ -87,16 +87,16 @@ $hm = get_home_url(); ?>
         </div>
       </div>
     </div>
-    <h1 class="pc2">
+    <!-- <h1 class="pc2">
       <img src="<?php echo $td; ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
-    </h1>
+    </h1> -->
   </section>
   <!-- /mv -->
 
   <section class="media cont" id="media">
-    <div class="marquee-wrap">
-      <p class="top_title"><span class="eng_title">NEWS</span><span class="jp_title">お知らせ</span></p>
-      <div class="news-wrap">
+    <div class="marquee-wrap ">
+      <p class="top_title top"><span class="eng_title">NEWS</span><span class="jp_title">お知らせ</span></p>
+      <div class="news-wrap top">
         <?php
         $args = array(
           'post_type'      => 'post',
@@ -105,7 +105,7 @@ $hm = get_home_url(); ?>
         );
         $the_query = new WP_Query($args);
         ?>
-        <div class="news-info">
+        <div class="news-info ">
           <p class="info-title">診察に関するお願い</p>
           <ul class="info-content">
             <li>土曜日の診察は完全予約制となっております。</li>
@@ -121,9 +121,11 @@ $hm = get_home_url(); ?>
           <ul class="news-content">
             <?php if ($the_query->have_posts()) : ?>
               <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <li class="">
-                  <p class="news-date"><?php echo get_the_date('Y.m.d'); ?></p>
-                  <p class="news-title"><?php the_title(); ?></p>
+                <li>
+                  <a href="<?php echo $hm; ?>/news">
+                    <p class="news-date"><?php echo get_the_date('Y.m.d'); ?></p>
+                    <p class="news-title"><?php the_title(); ?></p>
+                  </a>
                 </li>
               <?php endwhile; ?>
             <?php endif; ?>
@@ -138,18 +140,19 @@ $hm = get_home_url(); ?>
   </section>
   <!-- /media -->
 
-  <section class="caratact_seciton">
-    <div class="caratact_wrap">
+  <section class="cataract_seciton top">
+    <div class="cataract_wrap">
       <p class="top_title under"><span class="eng_title">CATARACT</span><span class="jp_title">白内障手術への取り組み</span></p>
     </div>
     <div>
       <?php
       $cataracts = SCF::get('cataracts');
       if (!empty($cataracts)) :
+        $ul_class = (count($cataracts) >= 4) ? 'cataract-slick' : '';
       ?>
-        <ul class="caratact-card-list">
+        <div class="<?php echo esc_attr($ul_class); ?> cataract-card-list slick-card-list">
           <?php foreach ($cataracts as $item) : ?>
-            <li class="card-item">
+            <div class="card-item">
               <?php
               $image_id = $item['cataract_image'];
               $image_url = wp_get_attachment_image_url($image_id, 'full');
@@ -165,50 +168,57 @@ $hm = get_home_url(); ?>
               <?php if (!empty($item['cataract_link'])) : ?>
                 <a class="card_link" href="<?php echo esc_url($item['cataract_link']); ?>">VIEW MORE →</a>
               <?php endif; ?>
-            </li>
+            </div>
           <?php endforeach; ?>
-        </ul>
+        </div>
       <?php endif; ?>
     </div>
-    <div class="caratact_wrap">
-      <div class="caratact_arrow"></div>
-      <div class="custom_dots"></div>
+    <div class="cataract_wrap slick-control">
+      <div class="cataract_arrow slick-arrow-wrap"></div>
+      <div class="custom-dots"></div>
     </div>
 
 
   </section>
 
-  <section class="myopia_section">
+  <section class="myopia_section top">
     <div class="myopia_wrap">
       <p class="top_title under"><span class="eng_title">MYOPIA</span><span class="jp_title">近視治療</span></p>
-      <div>
-        <?php
-        $myopias = SCF::get('myopias');
-        if (!empty($myopias)) :
-        ?>
-          <ul class="card-list">
-            <?php foreach ($myopias as $item) : ?>
-              <li class="card-item">
-                <?php
-                $image_id = $item['myopia_image'];
-                $image_url = wp_get_attachment_image_url($image_id, 'full');
-                if ($image_url) :
-                ?>
-                  <img src="<?php echo esc_url($image_url); ?>" alt="">
-                <?php endif; ?>
+    </div>
+    <div>
+      <?php
+      $myopias = SCF::get('myopias');
+      if (!empty($myopias)) :
+        // コンテンツ数によってクラス名を切り替え
+        $ul_class = (count($myopias) >= 4) ? 'myopia-slick' : '';
+      ?>
+        <ul class="<?php echo esc_attr($ul_class); ?> myopia-card-list slick-card-list">
+          <?php foreach ($myopias as $item) : ?>
+            <li class="card-item">
+              <?php
+              $image_id = $item['myopia_image'];
+              $image_url = wp_get_attachment_image_url($image_id, 'full');
+              if ($image_url) :
+              ?>
+                <img src="<?php echo esc_url($image_url); ?>" alt="">
+              <?php endif; ?>
 
-                <?php if (!empty($item['myopia_text'])) : ?>
-                  <p class="card_text"><?php echo esc_html($item['myopia_text']); ?></p>
-                <?php endif; ?>
+              <?php if (!empty($item['myopia_text'])) : ?>
+                <p class="card_text"><?php echo esc_html($item['myopia_text']); ?></p>
+              <?php endif; ?>
 
-                <?php if (!empty($item['myopia_link'])) : ?>
-                  <a class="card_link" href="<?php echo esc_url($item['myopia_link']); ?>">VIEW MORE →</a>
-                <?php endif; ?>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-        <?php endif; ?>
-      </div>
+              <?php if (!empty($item['myopia_link'])) : ?>
+                <a class="card_link" href="<?php echo esc_url($item['myopia_link']); ?>">VIEW MORE →</a>
+              <?php endif; ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      <?php endif; ?>
+
+    </div>
+    <div class="myopia_wrap slick-control">
+      <div class="myopia_arrow slick-arrow-wrap"></div>
+      <div class="myopia-dots"></div>
     </div>
   </section>
 
@@ -469,14 +479,26 @@ if ($the_query->have_posts()) :
   });
 
   jQuery(document).ready(function($) {
-    $('.caratact-card-list').slick({
+    $('.cataract-slick').slick({
       dots: true,
       slidesToShow: 1,
       variableWidth: true, // スライド幅を固定サイズにする
-      appendArrows: $('.caratact_arrow'), // 矢印を入れたい要素
-      prevArrow: '<button class="slick-prev">←</button>',
-      nextArrow: '<button class="slick-next">→</button>',
+      appendArrows: $('.cataract_arrow'), // 矢印を入れたい要素
+      prevArrow: '<button class="slick-prev"><svg id="arrow_left" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g id="楕円形_7" data-name="楕円形 7" fill="none" stroke="#fff" stroke-width="1"><circle cx="32" cy="32" r="32" stroke="none"/><circle cx="32" cy="32" r="31.5" fill="none"/></g><path id="パス_58" data-name="パス 58" d="M-17052.236,13510.652h-32l7.758-8" transform="translate(17100.236 -13478.652)" fill="none" stroke="#fff" stroke-width="1"/></svg></button>',
+      nextArrow: '<button class="slick-next"><svg id="arrow_right" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g id="楕円形_8" data-name="楕円形 8" fill="none" stroke="#fff" stroke-width="1"><circle cx="32" cy="32" r="32" stroke="none"/><circle cx="32" cy="32" r="31.5" fill="none"/> </g><path id="パス_59" data-name="パス 59" d="M-17084.236,13510.652h32l-7.758-8" transform="translate(17100.236 -13478.652)" fill="none" stroke="#fff" stroke-width="1"/></svg></button>',
       appendDots: $('.custom-dots'), // ドットを入れたい要素
+    });
+  });
+
+  jQuery(document).ready(function($) {
+    $('.myopia-slick').slick({
+      dots: true,
+      slidesToShow: 1,
+      variableWidth: true, // スライド幅を固定サイズにする
+      appendArrows: $('.myopia_arrow'), // 矢印を入れたい要素
+      prevArrow: '<button class="slick-prev"><svg id="arrow_left" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g id="楕円形_7" data-name="楕円形 7" fill="none" stroke="#fff" stroke-width="1"><circle cx="32" cy="32" r="32" stroke="none"/><circle cx="32" cy="32" r="31.5" fill="none"/></g><path id="パス_58" data-name="パス 58" d="M-17052.236,13510.652h-32l7.758-8" transform="translate(17100.236 -13478.652)" fill="none" stroke="#fff" stroke-width="1"/></svg></button>',
+      nextArrow: '<button class="slick-next"><svg id="arrow_right" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><g id="楕円形_8" data-name="楕円形 8" fill="none" stroke="#fff" stroke-width="1"><circle cx="32" cy="32" r="32" stroke="none"/><circle cx="32" cy="32" r="31.5" fill="none"/> </g><path id="パス_59" data-name="パス 59" d="M-17084.236,13510.652h32l-7.758-8" transform="translate(17100.236 -13478.652)" fill="none" stroke="#fff" stroke-width="1"/></svg></button>',
+      appendDots: $('.myopia-dots'), // ドットを入れたい要素
     });
   });
 </script>

@@ -7,11 +7,11 @@ define("title", "日帰り手術｜ともまつ眼科クリニック");
 </span>
 <main id="dayope" class="no-index-page">
   <section id="dayope_main_visual" class="no-index-page-sec">
-    <div class="news_list_logo">
+    <!-- <div class="news_list_logo">
       <h1 class="pc2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
       </h1>
-    </div>
+    </div> -->
     <div class="visual_text">
       <h2>DAY OPERATION<br><span>日帰り手術</span></h2>
     </div>
