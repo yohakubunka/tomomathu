@@ -192,17 +192,34 @@ div.s_fix_sp {
 	background-color: #000;
 	position: fixed;
 	right: 24px;
-	bottom: 90px;
+	bottom: 40px;
 	overflow: hidden;
 	border-radius: 100px 100px 0 100px;
-	transition: width 0.3s ease;
-	width: 100px;
+	transition: width 0.3s ease, height 0.3s ease;
+	width: 541px;
 	box-shadow: 0 0 6px rgba(142, 142, 142, 0.6);
 	cursor: pointer;
+	z-index: 80;
+
+	@media only screen and (max-width: 1366px) {
+		display: none !important;
+	}
 
 
+	&.is-shrink {
+		width: 100px;
 
-	.js_contact_btn .tel_icon {
+		.tel_icon {
+			display: block;
+		}
+
+		.js_contact_btnTxt {
+			opacity: 0;
+			transform: translateX(20px);
+		}
+	}
+
+	.tel_icon {
 		font-size: 32px;
 		padding: 0 18px;
 		color: #fff;
@@ -210,89 +227,76 @@ div.s_fix_sp {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		z-index: 2;
+		display: none;
 	}
 
-	&:hover {
-		width: 541px;
-
-		.js_contact_btn .tel_icon {
-			display: none;
-		}
-
-	}
-}
-
-
-.js_contact_btnInner {
-	display: flex;
-	align-items: center;
-	height: 100px;
-	color: #fff;
-	position: relative;
-	padding: 26px 20px 26px 26px;
-
-	a {
+	.js_contact_btnInner {
 		display: flex;
-	}
-}
-
-.js_contact_btnTxt {
-	white-space: nowrap;
-	opacity: 0;
-	transform: translateX(20px);
-	transition: opacity 0.3s ease, transform 0.3s ease;
-	display: flex;
-	align-items: center;
-	gap: 16px;
-
-	.tel_num {
-		display: flex;
-		gap: 8px;
 		align-items: center;
-	}
-
-	p,
-	i {
+		height: 100px;
 		color: #fff;
-		font-size: 2.4rem;
+		position: relative;
+		padding: 26px 20px 26px 26px;
 
-	}
-
-	.reception_wrap {
-		padding-left: 16px;
-		border-left: solid 1px #fff;
-
-		.reception {
+		a {
 			display: flex;
-			align-items: center;
-			margin-bottom: 4px;
-			gap: 10px;
-
-
-
-			.title {
-				font-size: 1.6rem;
-			}
-
-			.time_wrap {
-				p {
-					font-size: 1.2rem;
-				}
-
-				span {
-					font-size: 1rem;
-				}
-			}
-		}
-
-		.first {
-			font-size: 1rem;
 		}
 	}
-}
 
-.tel_wrap:hover .js_contact_btnTxt {
-	opacity: 1;
-	transform: translateX(0);
+	.js_contact_btnTxt {
+		white-space: nowrap;
+		opacity: 1;
+		transform: translateX(0);
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		display: flex;
+		align-items: center;
+		gap: 16px;
 
+		.tel_num {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+
+			p,
+			i {
+				color: #fff;
+				font-size: 24px;
+			}
+		}
+
+		.reception_wrap {
+			padding-left: 16px;
+			border-left: solid 1px #fff;
+
+			.reception {
+				display: flex;
+				align-items: center;
+				margin-bottom: 4px;
+				gap: 10px;
+
+				.title {
+					font-size: 16px;
+					color: #fff;
+				}
+
+				.time_wrap {
+					p {
+						font-size: 12px;
+						color: #fff;
+					}
+
+					span {
+						font-size: 10px;
+						color: #fff;
+					}
+				}
+			}
+
+			.first {
+				font-size: 10px;
+				color: #fff;
+			}
+		}
+	}
 }

@@ -12,11 +12,11 @@ define("title", "診察の流れ｜ともまつ眼科クリニック");
 </style>
 <main id="flow" class="no-index-page">
   <section id="flow_main_visual" class="no-index-page-sec">
-    <div class="news_list_logo">
+    <!-- <div class="news_list_logo">
       <h1 class="pc2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
       </h1>
-    </div>
+    </div> -->
     <div class="visual_text">
       <h2>FLOW<br><span>診察の流れ</span></h2>
     </div>
@@ -41,7 +41,7 @@ define("title", "診察の流れ｜ともまつ眼科クリニック");
             <tr>
               <td valign="top"></td>
               <td valign="top">（土曜）</td>
-              <td valign="top">09:00~11:00（完全予約制）	</td>
+              <td valign="top">09:00~11:00（完全予約制） </td>
             </tr>
           </table>
           <p class="hidden-off-425">

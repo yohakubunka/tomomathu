@@ -1291,6 +1291,11 @@ div.index {
         gap: 40px;
         align-items: center;
 
+        @media only screen and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
         .news-info {
             max-width: calc(100% / 2 - 20px);
             width: 100%;
@@ -1298,12 +1303,25 @@ div.index {
             padding: 70px 80px;
             border-bottom: solid 3px #A39154;
 
+            @media only screen and (max-width: 1200px) {
+                padding: 32px;
+            }
+
+            @media only screen and (max-width: 1024px) {
+                max-width: 100%
+            }
+
             .info-title {
                 font-family: dnp-shuei-mincho-pr6n, sans-serif;
                 font-size: 3rem;
                 color: #A39154;
                 text-align: center;
                 margin-bottom: 40px;
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 1.8rem;
+                    margin-bottom: 16px;
+                }
             }
 
             .info-content {
@@ -1316,6 +1334,10 @@ div.index {
                     padding-left: 1.5em;
                     list-style: none;
                     font-size: 1.8rem;
+
+                    @media only screen and (max-width: 767px) {
+                        font-size: 1.6rem;
+                    }
 
                     &::after {
                         content: '●';
@@ -1339,31 +1361,57 @@ div.index {
             max-width: calc(100% / 2 - 20px);
             width: 100%;
 
+            @media only screen and (max-width: 1024px) {
+                max-width: 100%
+            }
+
             .news-content {
                 margin-bottom: 40px;
 
                 li {
-                    display: flex;
-                    gap: 24px;
-                    padding: 24px 0;
-                    border-top: solid 1px #fff;
-                    align-items: center;
+                    a {
 
-                    &:last-of-type {
-                        border-bottom: solid 1px #fff;
-                    }
+                        display: flex;
+                        gap: 24px;
+                        padding: 24px 0;
+                        border-top: solid 1px #fff;
+                        align-items: center;
 
-                    p {
-                        color: #fff;
+                        @media only screen and (max-width: 767px) {
+                            padding: 16px 0;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 8px;
+                        }
 
-                    }
+                        &:last-of-type {
+                            border-bottom: solid 1px #fff;
+                        }
 
-                    .news-date {
-                        font-size: 1.8rem;
-                    }
+                        p {
+                            color: #fff;
 
-                    .news-title {
-                        font-size: 2rem;
+                        }
+
+                        .news-date {
+                            font-size: 1.8rem;
+
+                            @media only screen and (max-width: 767px) {
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        .news-title {
+                            font-size: 2rem;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 100%;
+
+                            @media only screen and (max-width: 767px) {
+                                font-size: 1.6rem;
+                            }
+                        }
                     }
                 }
             }
@@ -1373,6 +1421,7 @@ div.index {
                     font-size: 1.4rem;
                     color: #fff;
                     text-align: right;
+                    margin-right: 16px;
                 }
             }
         }
@@ -1460,6 +1509,10 @@ div.index {
         font-size: 4.8rem;
         color: #C4B379;
         font-weight: 500;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 2.4rem;
+        }
     }
 
     .jp_title {
@@ -1468,6 +1521,10 @@ div.index {
         font-style: normal;
         font-size: 3rem;
         color: #fff;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 1.8rem;
+        }
     }
 }
 
@@ -2236,29 +2293,116 @@ div.index .mission.cont {
     margin-right: auto;
 }
 
-.caratact_seciton {
-    .caratact_wrap {
+.cataract_seciton {
+    padding-bottom: 100px;
+
+    .cataract_wrap {
         max-width: 1660px;
         margin: auto;
         padding: 0 40px;
-        padding-bottom: 100px;
+
+        @media only screen and (max-width: 767px) {
+            padding: 0 24px;
+        }
     }
 }
 
 .myopia_section {
+    margin-bottom: calc(100px - 44px);
+
     .myopia_wrap {
         max-width: 1660px;
         margin: auto;
         padding: 0 40px;
-        padding-bottom: 100px;
     }
 }
 
-.caratact-card-list {
-    max-width: 80%;
+// slick関連
+.cataract_seciton,
+.myopia_section {
+    .slick-track {
+        display: flex;
+    }
+
+    .slick-slide {
+        height: auto !important;
+    }
+
+
+    .slick-prev::before,
+    .slick-next::before {
+        content: '';
+    }
+
+    .slick-control {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 44px;
+
+        @media only screen and (max-width: 540px) {
+            gap: 24px;
+        }
+
+        .slick-arrow-wrap {
+            position: relative;
+            display: flex;
+            gap: 80px;
+
+            @media only screen and (max-width: 540px) {
+                gap: 24px;
+            }
+
+
+            .slick-arrow {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                z-index: 5;
+            }
+        }
+
+        .slick-dots {
+            display: block !important;
+            position: relative;
+            top: 0;
+            left: 0;
+
+            li {
+                margin: 0 2px;
+
+                button::before {
+                    color: #fff;
+                    font-size: 1.2rem;
+
+                }
+            }
+
+        }
+    }
+}
+
+.slick-card-list {
+    max-width: 1790px;
     width: 100%;
     margin-left: auto;
-    padding: 0 0 0 13.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    padding: 0 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 2000px) {
+        padding-left: clamp(40px, (100vw - 1660px) / 2 + 40px, 200px);
+        margin-left: 0;
+    }
+
+
+    @media only screen and (max-width: 767px) {
+        padding: 0 24px;
+    }
 
     .card-item {
         padding: 16px;
@@ -2268,13 +2412,26 @@ div.index .mission.cont {
         gap: 16px;
         max-width: 440px;
         width: 100%;
-        margin-right: 20px;
-        height: 100%;
+        flex: 1;
+        margin: 0;
+
+        @media only screen and (max-width: 767px) {
+            flex: auto;
+            max-width: calc(100% / 2 - 10px);
+        }
+
+        @media only screen and (max-width: 540px) {
+            max-width: 100%;
+        }
 
         .card_text {
             font-family: dnp-shuei-mincho-pr6n, sans-serif;
             font-size: 2rem;
             font-weight: 500;
+
+            @media only screen and (max-width: 540px) {
+                font-size: 1.6rem;
+            }
         }
 
         .card_link {
@@ -2296,14 +2453,44 @@ div.index .mission.cont {
     }
 }
 
-.slick-track {
-    display: flex;
+.myopia-slick,
+.cataract-slick {
+    padding-left: 40px;
+
+    @media only screen and (max-width: 2000px) {
+        padding-left: clamp(40px, (100vw - 1660px) / 2 + 40px, 200px);
+        max-width: none;
+    }
+
+
+    @media only screen and (max-width: 540px) {
+        padding-left: 24px;
+    }
+
+    div {
+        height: 100%;
+
+        .card-item {
+            max-width: 440px;
+            width: 100%;
+            margin-right: 20px;
+            height: 100%;
+
+            @media only screen and (max-width: 767px) {
+                height: 328px;
+
+            }
+
+            @media only screen and (max-width: 540px) {
+                max-width: 280px;
+                height: 284px;
+
+            }
+        }
+    }
+
 }
 
-.slick-slide {
-    height: auto !important;
-}
-
-.caratact_arrow {
-    position: relative;
+section {
+    scroll-margin-top: 100px;
 }

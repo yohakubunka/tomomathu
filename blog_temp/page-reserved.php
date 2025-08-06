@@ -12,11 +12,11 @@ define("title", "WEBからの予約｜ともまつ眼科クリニック");
 </style>
 <main id="reserved" class="no-index-page">
   <section id="reserved_main_visual" class="no-index-page-sec">
-    <div class="news_list_logo">
+    <!-- <div class="news_list_logo">
       <h1 class="pc2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
       </h1>
-    </div>
+    </div> -->
     <div class="visual_text">
       <h2>RESERVED<br><span>WEBからの予約</span></h2>
     </div>
@@ -57,7 +57,7 @@ define("title", "WEBからの予約｜ともまつ眼科クリニック");
           </a>
           <p class="phone-p1">
             受付時間:(平日) 09：00〜14：30<br>
-            　　　　 (土曜) 09:00~11:00 （完全予約制）	
+            　　　　 (土曜) 09:00~11:00 （完全予約制）
           </p>
         </div>
       </div>

@@ -87,3 +87,59 @@ $(function () {
   });
 
 });
+
+jQuery(function ($) {
+  var $telWrap = $('.tel_wrap');
+  var shrinkOffset = 100; // スクロール量のしきい値
+
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > shrinkOffset) {
+      $telWrap.addClass('is-shrink');
+    } else {
+      $telWrap.removeClass('is-shrink');
+    }
+  });
+});
+
+jQuery(function ($) {
+  var $header = $('.new_header');
+  var shrinkOffset = 600; // スクロール量のしきい値
+
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > shrinkOffset) {
+      $header.addClass('black-back');
+    } else {
+      $header.removeClass('black-back');
+    }
+  });
+});
+
+$(function () {
+  $('.humberger').on('click', function () {
+    $(this).toggleClass('active');
+
+    const textEl = $(this).find('p');
+    const isMenu = textEl.text() === 'MENU';
+    textEl.text(isMenu ? 'CLOSE' : 'MENU');
+
+    $('.menu-panel').toggleClass('is-open');
+  });
+
+  // IDリンクをクリックしたらメニューを閉じる
+  $('.internal-link').on('click', function () {
+    $('.menu-panel').removeClass('is-open');
+    $('.humberger').removeClass('active').find('p').text('MENU');
+  });
+});
+
+
+$(document).ready(function () {
+  $('.menu-open').on('click', function (e) {
+    // 画面幅が768px以下のときだけ実行
+    if (window.innerWidth <= 768) {
+      e.preventDefault(); // aタグのページ遷移を防ぐ
+      $(this).toggleClass('open');
+      $(this).next('ul').slideToggle(200);
+    }
+  });
+});

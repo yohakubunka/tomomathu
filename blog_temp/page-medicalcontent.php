@@ -12,11 +12,11 @@ define("title", "診療内容｜ともまつ眼科クリニック");
 </style>
 <main id="medical" class="no-index-page">
   <section id="medical_main_visual" class="no-index-page-sec">
-    <div class="news_list_logo">
+    <!-- <div class="news_list_logo">
       <h1 class="pc2">
         <img src="<?php echo get_template_directory_uri(); ?>/images/common/h_logo.png" alt="ともまつ眼科クリニック">
       </h1>
-    </div>
+    </div> -->
     <div class="visual_text">
       <h2>MEDICAL<br><span>診療について</span></h2>
     </div>
